@@ -12,7 +12,8 @@ theme">
       angularticsCategory="Export theme">
         <mat-icon>assignment</mat-icon>
     </button>
-  <ngx-prism [language]="'css'" ngxCopyPaste #cp="copy">
+    <!-- <ngx-prism [language]="'css'" ngxCopyPaste #cp="copy"></ngx-prism> -->
+  <ng-container ngxCopyPaste #cp="copy">
     <pre *ngIf="!theme.isPreBuilt; else elseBlock">
 @import '~@angular/material/theming';
 @include mat-core();
@@ -54,6 +55,6 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     <ng-template #elseBlock>
         @import "~@angular/material/prebuilt-themes/{{theme.name}}.css";
     </ng-template>
-  </ngx-prism>
+  </ng-container>
 </mat-card>
 </ng-container>

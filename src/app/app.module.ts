@@ -28,10 +28,9 @@ import { ThemeService } from './theme.service';
 import { MatThemeComponent } from './mat-theme/mat-theme.component';
 import { PaletteComponent } from './palatte/palette.component';
 import { ColorPaletteComponent } from './color-palette/color-palette.component';
-import { ColorPickerModule } from 'narik-angular-color-picker';
 import { AutocompleteExampleComponent } from './mat-widgets/autocomplete-example/autocomplete-example.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { PrismModule } from '@ngx-prism/core';
+// import { PrismModule } from '@ngx-prism/core';
 import { NgxCopyPasteModule } from 'ngx-copypaste';
 import { ProgressbarComponent } from './mat-widgets/progressbar/progressbar.component';
 import { Angulartics2Module } from 'angulartics2';
@@ -41,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PrebuiltThemeComponent } from './prebuilt-theme/prebuilt-theme.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
@@ -81,7 +81,7 @@ const ROUTES: Routes = [
     FormsModule,
     MatInputModule,
     MatSlideToggleModule,
-    PrismModule,
+    // PrismModule,
     NgxCopyPasteModule,
     MatExpansionModule,
     MatBadgeModule,
